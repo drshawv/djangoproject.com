@@ -1,4 +1,5 @@
 from .common import *  # noqa
+import django_heroku
 
 ALLOWED_HOSTS = [
     'www.djangoproject.com',
@@ -83,3 +84,5 @@ if 'sentry_dsn' in SECRETS and not DEBUG:
 if 'recaptcha_public_key' in SECRETS:
     RECAPTCHA_PUBLIC_KEY = SECRETS.get('recaptcha_public_key')
     RECAPTCHA_PRIVATE_KEY = SECRETS.get('recaptcha_private_key')
+
+django_heroku.settings(locals())

@@ -1,2 +1,2 @@
-web: make run
+web: gunicorn djangoproject.wsgi
 scss: make watch-scss
