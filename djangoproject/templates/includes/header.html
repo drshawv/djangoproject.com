@@ -1,6 +1,6 @@
 <div role="banner" id="top">
   <div class="container">
-    <a class="logo" href="{% url 'homepage' %}">Maestro Music Professionals</a>
+	  <a class="logo" href="{% url 'homepage' %}">Maestro Music Professionals</a>
     <p class="meta">The web framework for perfectionists with deadlines.</p>
     <div role="navigation">
       <ul>
@@ -18,14 +18,14 @@
 	</li>
         <li{% if 'community' in request.path or 'conduct' in request.path %} class="active"{% endif %}>
           <a href="{% url 'community-index' %}">Community</a>
-	</li>{% endcomment %}
+	</li>
         <li>
           <a href="https://github.com/django/django" target="_blank" rel="noopener">Code</a>
         </li>
         <li>
           <a href="https://code.djangoproject.com/">Issues</a>
         </li>
-	{% comment %}<li{% if 'foundation' in request.path %} class="active"{% endif %}>
+	<li{% if 'foundation' in request.path %} class="active"{% endif %}>
           <a href="{% url 'homepage' %}foundation/">About</a>
         </li>
 	<li{% if 'fundraising' in request.path %} class="active"{% endif %}>

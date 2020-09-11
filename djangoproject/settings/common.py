@@ -154,6 +154,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'django_hosts.middleware.HostsResponseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 PASSWORD_HASHERS = [

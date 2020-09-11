@@ -460,7 +460,7 @@ blockquote {
     .logo {
         @include font-size(40);
         @include sans-serif;
-        background: url(../img/logo-django.png) 0 0 no-repeat;
+        //background: url(../img/logo-django.png) 0 0 no-repeat;
         color: #FFF;
         display: block;
         float: left;
@@ -473,7 +473,7 @@ blockquote {
         height: 36px;
 
         .mdzr-svg & { // deliver svg logo if applicable
-            background: url(../img/logo-django.svg) center center no-repeat;
+         //   background: url(../img/logo-django.svg) center center no-repeat;
         }
 
         @include respond-min(768px) {
@@ -941,7 +941,7 @@ blockquote {
     .logo {
         @include font-size(40);
         @include sans-serif;
-        background: url(../img/logo-django.png) 0 0 no-repeat;
+        //background: url(../img/logo-django.png) 0 0 no-repeat;
         color: $green-dark;
         display: block;
         font-weight: 700;
@@ -957,7 +957,7 @@ blockquote {
         }
 
         .mdzr-svg & {
-            background: url(../img/logo-django.svg) center center no-repeat;
+        //    background: url(../img/logo-django.svg) center center no-repeat;
             height: 39px;
             width: 109px;
         }

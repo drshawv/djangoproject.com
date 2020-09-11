@@ -5,7 +5,7 @@ ALLOWED_HOSTS = [
     'www.maestromusicpros.com',
     #'www.djangoproject.com',
     #'djangoproject.com',
-    #'www.djangoproject.localhost',
+    'www.djangoproject.localhost',
     #'polar-inlet-43860.herokuapp.com',
     #'pacific-lowlands-80447.herokuapp.com',
     #'docs.djangoproject.com',
@@ -63,7 +63,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 
 STATIC_ROOT = str(DATA_DIR.joinpath('static'))
 
-STATIC_URL = 'https://static.djangoproject.com/'
+#STATIC_URL = 'https://static.djangoproject.com/'
 
 # Docs settings
 DOCS_BUILD_ROOT = DATA_DIR.joinpath('data', 'docbuilds')
