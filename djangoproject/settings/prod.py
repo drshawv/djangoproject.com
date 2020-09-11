@@ -1,16 +1,17 @@
 from .common import *  # noqa
-import django_heroku
 
 ALLOWED_HOSTS = [
     'www.djangoproject.com',
     'djangoproject.com',
-    'docs.djangoproject.com',
-    'dashboard.djangoproject.com',
+    'www.djangoproject.localhost',
+    'pacific-lowlands-80447.herokuapp.com',
+    #'docs.djangoproject.com',
+    #'dashboard.djangoproject.com',
 ] + SECRETS.get('allowed_hosts', [])
 
 LOCALE_MIDDLEWARE_EXCLUDED_HOSTS = ['docs.djangoproject.com']
 
-DEBUG = False
+DEBUG = True
 THUMBNAIL_DEBUG = DEBUG
 
 CACHES = {
@@ -84,5 +85,3 @@ if 'sentry_dsn' in SECRETS and not DEBUG:
 if 'recaptcha_public_key' in SECRETS:
     RECAPTCHA_PUBLIC_KEY = SECRETS.get('recaptcha_public_key')
     RECAPTCHA_PRIVATE_KEY = SECRETS.get('recaptcha_private_key')
-
-django_heroku.settings(locals())

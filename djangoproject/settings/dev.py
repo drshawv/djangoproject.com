@@ -3,8 +3,9 @@ from .common import *  # noqa
 ALLOWED_HOSTS = [
     'www.djangoproject.localhost',
     'djangoproject.localhost',
-    'docs.djangoproject.localhost',
-    'dashboard.djangoproject.localhost',
+    'pacific-lowlands-80447.herokuapp.com',
+    #'docs.djangoproject.localhost',
+    #'dashboard.djangoproject.localhost',
 ] + SECRETS.get('allowed_hosts', [])
 
 LOCALE_MIDDLEWARE_EXCLUDED_HOSTS = ['docs.djangoproject.localhost']
@@ -16,11 +17,12 @@ CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'trololololol',
-    },
-    'docs-pages': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'docs-pages',
-    },
+    }
+    #,
+    #'docs-pages': {
+    #    'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    #    'LOCATION': 'docs-pages',
+    #},
 }
 
 CSRF_COOKIE_SECURE = False

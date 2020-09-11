@@ -29,22 +29,23 @@ CACHE_MIDDLEWARE_SECONDS = 60 * 5  # 5 minutes
 CACHE_MIDDLEWARE_KEY_PREFIX = 'django'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangoproject',
-        'USER': 'djangoproject',
-        'HOST': SECRETS.get('db_host', ''),
-        'PASSWORD': SECRETS.get('db_password', ''),
-        'PORT': SECRETS.get('db_port', ''),
-    },
-    'trac': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'code.djangoproject',
-        'USER': 'code.djangoproject',
-        'HOST': SECRETS.get('trac_db_host', ''),
-        'PASSWORD': SECRETS.get('trac_db_password', ''),
-        'PORT': SECRETS.get('trac_db_port', ''),
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #    'NAME': 'djangoproject',
+    #    'USER': 'djangoproject',
+    #    'HOST': SECRETS.get('db_host', ''),
+    #    'PASSWORD': SECRETS.get('db_password', ''),
+    #    'PORT': SECRETS.get('db_port', ''),
+    #}
+    #,
+    #'trac': {
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #    'NAME': 'code.djangoproject',
+    #    'USER': 'code.djangoproject',
+    #    'HOST': SECRETS.get('trac_db_host', ''),
+    #    'PASSWORD': SECRETS.get('trac_db_password', ''),
+    #    'PORT': SECRETS.get('trac_db_port', ''),
+    #}
 }
 
 DATABASE_ROUTERS = ['tracdb.db_router.TracRouter']
@@ -55,22 +56,22 @@ FUNDRAISING_DEFAULT_FROM_EMAIL = "fundraising@djangoproject.com"
 FIXTURE_DIRS = [str(PROJECT_PACKAGE.joinpath('fixtures'))]
 
 INSTALLED_APPS = [
-    'accounts',
-    'aggregator',
-    'blog',
-    'contact',
-    'dashboard',
-    'docs.apps.DocsConfig',
-    'foundation',
-    'legacy',
-    'members',
-    'releases',
-    'svntogit',
+    #'accounts',
+    #'aggregator',
+    #'blog',
+    #'contact',
+    #'dashboard',
+    #'docs.apps.DocsConfig',
+    #'foundation',
+    #'legacy',
+    #'members',
+    #'releases',
+    #'svntogit',
     'tracdb',
-    'fundraising',
-    'captcha',
+    #'fundraising',
+    #'captcha',
 
-    'registration',
+    #'registration',
     'django_hosts',
     'sorl.thumbnail',
     'djmoney',
@@ -87,7 +88,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'django_push.subscriber',
+    #'django_push.subscriber',
 ]
 
 LANGUAGE_CODE = 'en-us'
@@ -207,9 +208,9 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
-                'docs.context_processors.docs_version',
-                'releases.context_processors.django_version',
-                'aggregator.context_processors.community_stats',
+                #'docs.context_processors.docs_version',
+                #'releases.context_processors.django_version',
+                #'aggregator.context_processors.community_stats',
                 'django.template.context_processors.request',
             ],
         },

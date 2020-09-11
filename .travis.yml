@@ -1,26 +1,25 @@
 os: linux
 dist: bionic
 addons:
-  postgresql: '10'
+  postgresql: "10"
 language: python
 python:
-- '3.6'
+  - "3.6"
 install:
-- pip install coveralls tox
+  - pip install coveralls tox
 before_script:
-- createuser -U postgres -d djangoproject --superuser
-- createdb -U postgres -O djangoproject djangoproject
-- createuser -U postgres -d code.djangoproject --superuser
-- createdb -U postgres -O code.djangoproject code.djangoproject
-- psql -U postgres -d code.djangoproject < tracdb/trac.sql
+  - createuser -U postgres -d djangoproject --superuser
+  - createdb -U postgres -O djangoproject djangoproject
+  - createuser -U postgres -d code.djangoproject --superuser
+  - createdb -U postgres -O code.djangoproject code.djangoproject
+  - psql -U postgres -d code.djangoproject < tracdb/trac.sql
 script:
-- tox
+  - tox
 after_success: coveralls
-deploy:
-  provider: heroku
-  api_key:
-    secure: asjURQv+Ben45WFsLeE9dqlO5qBd0FoA4nxdXU5KCliuCoJCY/KhDq44y6/U/mYb6wAPKkssBS0EeXfDgszc9h+oYAg5torRyj5own9SP6PUAUs01Uv8CpoXYt+MRVMeW3kwgv2KEAHFFvl/n8Vx7NUtlI41fwSSkEXl5ufuie7DsBSddSoEm/v2eFhxckHo6soneCra/+RhaYOkbUAB/aZbygJfN3W4MPjqaUTtl822uEksSiQ0c6kdG+Kw7H6tbIh2nBpr69SeOGbGJIs8AePHcY+wQ/V5eltiVSzLrMadvu899Wvx+KqG0ZEY1TNKpC923UolFvz/7orXs2/wXQF020LMiYAwGOTnCtpeJ/Vbbxqa5zQjokfn768aKZnJ0RU9cDyQqfGRNrPkust6IB11wy6fmmLzjKTGekt6boAVVJOp0jcIgjjvBZKKINlVKIRAJ8guHd4cO034qeR3nsqHZBO7ch59+GMnzsCieGfNUwWn4frqYLpCpCh1gHUQyaluLQrGT6US2SeOHwLXKH/2/B8AsG2QUaOBF8AR4rfLQ2pVDLxiBiJsE2mLeJzTifJwqI9T5WARbBL35T0va6j0eoXenI5rOkfnc3JRp7BRBn9aogL8Gd+DWHMrimNI3HQuhDz0yddHnMID/FGiZiv+TI/m0kpVciygoq9r8Hs=
-  app: dantestproject
-  on:
-    repo: drshawv/djangoproject.com
-  skip_cleanup: 'true'
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.net#django-websites"
+    on_success: always
+    on_failure: always
+    use_notice: true
