@@ -4,7 +4,7 @@ ALLOWED_HOSTS = [
     'www.djangoproject.com',
     'djangoproject.com',
     'www.djangoproject.localhost',
-    'pacific-lowlands-80447.herokuapp.com',
+    'polar-inlet-43860.herokuapp.com',
     #'docs.djangoproject.com',
     #'dashboard.djangoproject.com',
 ] + SECRETS.get('allowed_hosts', [])
