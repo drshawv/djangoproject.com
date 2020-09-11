@@ -1,11 +1,13 @@
 from .common import *  # noqa
 
 ALLOWED_HOSTS = [
-    'www.djangoproject.com',
-    'djangoproject.com',
-    'www.djangoproject.localhost',
-    'polar-inlet-43860.herokuapp.com',
-    'pacific-lowlands-80447.herokuapp.com',
+    'maestromusicpros.com',
+    'www.maestromusicpros.com',
+    #'www.djangoproject.com',
+    #'djangoproject.com',
+    #'www.djangoproject.localhost',
+    #'polar-inlet-43860.herokuapp.com',
+    #'pacific-lowlands-80447.herokuapp.com',
     #'docs.djangoproject.com',
     #'dashboard.djangoproject.com',
 ] + SECRETS.get('allowed_hosts', [])
